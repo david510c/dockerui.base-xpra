@@ -21,6 +21,8 @@ ENV GUEST_USER=user \
     DISPLAY=:0 \
     XPRA_OPTIONS=
 
+EXPOSE 8080
+
 ADD common/ debian-series/ /docker/
 RUN chmod a+x /docker/*
 ENTRYPOINT ["/docker/entrypoint.sh"]
